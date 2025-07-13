@@ -20,3 +20,8 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 sudo apt install tesseract-ocr
+
+## Example
+
+[Second   4] ➜ OCR raw: €221,634.50 016180,400.26 7 ,
+   ➜ Extracted amounts: ['€221,634.50', '€180,400.26']
