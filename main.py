@@ -50,7 +50,7 @@ def run_ocr_pipeline(video_path: str):
 
         stable = tracker.update(amounts)
         if stable:
-            print(f"   ✅ Stable value: {stable}")
+            print(f"Stable value: {stable}")
 
         cv2.imwrite(f"debug_frame_{i}.png", proc)
 
