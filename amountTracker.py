@@ -36,5 +36,5 @@ class AmountTracker:
                 self.bad_frame_count += 1
 
             if self.bad_frame_count > self.tolerance:
-                print("⚠️  Too many bad frames — waiting for new stable value.")
+                print(" Too many bad frames — waiting for new stable value.")
         return None
