@@ -20,6 +20,7 @@ Install dependencies:
 ```bash
 pip install -r requirements.txt
 sudo apt install tesseract-ocr
+```
 
 ## Example
 
