@@ -27,10 +27,8 @@ def preprocess_frame(frame):
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
     dilated = cv2.dilate(thresh, kernel, iterations=1)
 
-    # 6. (Opcionalno) Closing za spajanje rupa
     closed = cv2.morphologyEx(dilated, cv2.MORPH_CLOSE, kernel)
 
-    # 7. Resize 2× za bolji OCR
     resized = cv2.resize(closed, None, fx=2, fy=2, interpolation=cv2.INTER_LINEAR)
 
     return resized
