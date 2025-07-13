@@ -26,9 +26,9 @@ def run_ocr_pipeline(video_path: str):
     frames = extract_frames(video_path, fps=1)
 
     for i, frame in enumerate(frames, start=1):
-        proc = preprocess_frame(frame)  # već iscroppovana i obrađena slika
+        proc = preprocess_frame(frame)  
 
-        # Direktan OCR na celokupnoj preprocesiranoj slici
+
         config = r'--oem 3 --psm 6 -c tessedit_char_whitelist=0123456789,.€$'
         text = pytesseract.image_to_string(proc, config=config)
 
@@ -39,7 +39,6 @@ def run_ocr_pipeline(video_path: str):
         if amounts:
             print(f"   ➜ Extracted amounts: {amounts}")
 
-        # Debug: snimi sliku
         cv2.imwrite(f"debug_frame_{i}.png", proc)
 
 
